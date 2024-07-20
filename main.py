@@ -1,6 +1,6 @@
 import time
 from cehcker import Checker
-from config import address_in, address_out, amount
+from config import address_in, address_out, amount, profit
 
 while True:
     value = Checker(address_in, address_out, amount)
@@ -9,7 +9,7 @@ while True:
 
     diff = value_2 - value
 
-    if diff > 2:
+    if diff > profit:
         #arbitrage(address_in, address_out, value_2)
         print(f'Можно было бы заработать {diff}')
     else:
